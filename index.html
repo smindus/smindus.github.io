@@ -1,146 +1,130 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Personal Website</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+    .tagline {
+      margin-bottom: 30px;
+      font-size: 1.2em;
+      color: #555;
+    }
+    .description {
+      margin: 0 auto 40px;
+      max-width: 600px;
+      color: #444;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+    .btn-group {
+      margin-bottom: 40px;
+    }
+    .btn-group a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: 2px solid #000;
+      color: #000;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-group a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .info-section {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .info-item {
+      margin-bottom: 20px;
+    }
+    .info-item h2 {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+    .info-item p {
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .info-item a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      border-bottom: 1px solid #000;
+      transition: color 0.3s;
+    }
+    .info-item a:hover {
+      color: #555;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Your Name | Personal Website&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Basic Reset */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #000;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 1px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.tagline {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #555;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.description {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 600px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #444;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.5;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-group {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-group a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid #000;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #000;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: background-color 0.3s, color 0.3s;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn-group a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #000;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.info-section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: left;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 600px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.info-item {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.info-item h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.info-item p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #555;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.info-item a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #000;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid #000;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: color 0.3s;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.info-item a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #555;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #aaa;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Your Name&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="tagline"&gt;All things consumer goods. Based between HK &amp; NYC. Want to chat? Book a call below.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="description"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>Fusce malesuada vulputate elit, sed placerat ante viverra at.<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>Integer a volutpat nunc. Morbi interdum lacus sed ipsum pulvinar, quis ultricies ipsum tristique.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="btn-group"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" target="_blank"&gt;Instagram&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" target="_blank"&gt;LinkedIn&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" target="_blank"&gt;Book a Call&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" target="_blank"&gt;Email Me&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Managing Partner @ Elevator Goods&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Helping build direct-to-consumer brands&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#" target="_blank"&gt;Learn more&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Cofounder of Couant&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Redefining phone chargers, launched in 2018&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#" target="_blank"&gt;Learn more&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="info-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Forbes 30 Under 30&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;2025, Consumer Technology Award&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#" target="_blank"&gt;Learn more&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;&amp;copy; 2025 Your Name&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="container">
+    <h1>Your Name</h1>
+    <p class="tagline">All things consumer goods. Based between HK & NYC. Want to chat? Book a call below.</p>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Fusce malesuada vulputate elit, sed placerat ante viverra at. 
+      Integer a volutpat nunc. Morbi interdum lacus sed ipsum pulvinar, quis ultricies ipsum tristique.
+    </p>
+
+    <div class="btn-group">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">Book a Call</a>
+      <a href="#" target="_blank">Email Me</a>
+    </div>
+
+    <div class="info-section">
+      <div class="info-item">
+        <h2>Managing Partner @ Elevator Goods</h2>
+        <p>Helping build direct-to-consumer brands</p>
+        <a href="#" target="_blank">Learn more</a>
+      </div>
+      <div class="info-item">
+        <h2>Cofounder of Couant</h2>
+        <p>Redefining phone chargers, launched in 2018</p>
+        <a href="#" target="_blank">Learn more</a>
+      </div>
+      <div class="info-item">
+        <h2>Forbes 30 Under 30</h2>
+        <p>2025, Consumer Technology Award</p>
+        <a href="#" target="_blank">Learn more</a>
+      </div>
+    </div>
+
+    <footer>&copy; 2025 Your Name</footer>
+  </div>
 </body>
 </html>
