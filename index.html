@@ -22,15 +22,15 @@
 
     /* Container for overall layout */
     .container {
-      max-width: 700px; /* You can reduce this to 650px or 600px if desired */
-      margin: 0 auto;
+      max-width: 750px; /* Slightly larger container */
+      margin: 50px auto; /* Moves the interface downward */
       padding: 2rem;
     }
 
     /* Name Heading (small, uppercase) */
     .name-heading {
       text-transform: uppercase;
-      font-weight: 300; /* lighter weight */
+      font-weight: 300;
       font-size: 0.9rem;
       letter-spacing: 2px;
       text-align: center;
@@ -47,14 +47,14 @@
       line-height: 1.3;
     }
 
-    /* Subheading (slightly smaller text) */
+    /* Subheading (descriptive paragraph) now in dark black */
     .subheading {
       text-align: center;
-      font-size: 0.9rem; /* smaller than default */
+      font-size: 0.9rem;
       line-height: 1.4;
       margin: 0 auto 2rem auto;
       max-width: 600px;
-      color: #666;
+      color: #000; /* Changed to dark black */
     }
 
     /* Social Links Container */
@@ -83,18 +83,16 @@
       border-radius: 8px;
       padding: 1rem;
       margin: 1rem auto;
-      max-width: 500px; /* narrower card for more space on the page */
-      display: flex; /* allows text on the left, button on the right */
+      max-width: 550px; /* Slightly larger cards */
+      display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     /* Text portion of the card */
     .card-content {
-      /* Optionally limit how wide the text can get */
       max-width: 75%;
     }
-
     .card-content h3 {
       margin-bottom: 0.5rem;
       font-size: 1.1rem;
@@ -114,7 +112,7 @@
       padding: 0.5rem 1rem;
       border-radius: 4px;
       transition: background-color 0.2s ease;
-      white-space: nowrap; /* keep text from wrapping */
+      white-space: nowrap;
     }
     .card-action a:hover {
       background-color: #333;
@@ -132,7 +130,7 @@
 <body>
 
   <div class="container">
-    <!-- New smaller heading -->
+    <!-- Small name header -->
     <h2 class="name-heading">MONISH SABNANI</h2>
 
     <!-- Main bold heading -->
