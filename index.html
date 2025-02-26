@@ -22,8 +22,12 @@
     }
 
     @media (max-width: 480px) {
-  .line1 {
-    white-space: nowrap;
+  .heading {
+    font-size: 2rem;  /* Reduce font size on smaller screens */
+  }
+  .heading .line1 {
+    white-space: nowrap; /* Force the text to stay on one line */
+    display: inline-block; /* Ensure it remains centered with the heading */
   }
 }
     
