@@ -10,7 +10,7 @@
   <meta name="keywords" content="Samuel Mindel, entrepreneur, e-commerce, branding, creativity, strategy, consumer goods, Japan, GC, LA" />
   <meta name="author" content="Samuel Mindel" />
   
-  <!-- Font Awesome CDN (no integrity attribute) -->
+  <!-- Font Awesome CDN -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -40,7 +40,6 @@
       padding: 2rem;
     }
     
-    /* Name Heading (small, uppercase) */
     .name-heading {
       text-transform: uppercase;
       font-weight: 300;
@@ -51,23 +50,20 @@
       color: #666;
     }
     
-    /* Main Bold Heading */
     .heading {
       text-align: center;
-      font-size: 2.4rem; /* Large for desktop */
+      font-size: 2.4rem;
       font-weight: bold;
       margin-bottom: 1rem;
       line-height: 1.3;
     }
     
-    /* Optional: reduce heading size on smaller screens to prevent wrapping */
     @media (max-width: 480px) {
       .heading {
         font-size: 1.7rem;
       }
     }
 
-    /* Subheading (dark black) */
     .subheading {
       text-align: center;
       font-size: 0.9rem;
@@ -86,28 +82,31 @@
       margin-bottom: 2rem;
     }
     
-    /* Social link styling (white background, light gray border, black text) */
+    /* Updated social link style: circular icons */
     .social-links a {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
       text-decoration: none;
-      color: #000;
       background-color: #fff;
       border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      transition: background-color 0.2s ease, border-color 0.2s ease;
+      border-radius: 50%;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      color: #000;
+      font-size: 1.2rem;
     }
-    
+
     .social-links a:hover {
       background-color: #f9f9f9;
       border-color: #ccc;
+      transform: translateY(-2px);
     }
     
     /* Brand colors for icons */
     .social-links a i.fa-twitter {
-      color: #1DA1F2; /* Twitter/X blue */
+      color: #1DA1F2;
     }
     .social-links a i.fa-instagram {
       color: #E1306C;
@@ -144,7 +143,6 @@
       color: #555;
     }
     
-    /* "Learn more" Button (lightened border) */
     .card-action a {
       text-decoration: none;
       color: #000;
@@ -161,7 +159,6 @@
       border-color: #ccc;
     }
     
-    /* Footer */
     footer {
       text-align: center;
       margin-top: 2rem;
@@ -172,33 +169,26 @@
 </head>
 <body>
   <div class="container">
-    <!-- Small Name Header -->
     <h2 class="name-heading">SAMUEL MINDEL</h2>
     
-    <!-- Main Bold Heading -->
     <h1 class="heading">
       Building cool things,<br>
       with cool people.<br>
       Based between GC &amp; LA.
     </h1>
 
-<!-- Subheading / Descriptive Paragraph -->
-    
-    <!-- Social Links -->
     <div class="social-links">
-      <!-- Using the classic Twitter icon (fa-twitter) but labeling it as "X" -->
       <a href="https://x.com/samuelmindel" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-twitter"></i> @samuelmindel
+        <i class="fab fa-twitter"></i>
       </a>
       <a href="https://www.instagram.com/sxmuelmindel" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i> @sxmuelmindel
+        <i class="fab fa-instagram"></i>
       </a>
       <a href="https://www.linkedin.com/in/samuelmindel" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i> LinkedIn
+        <i class="fab fa-linkedin"></i>
       </a>
     </div>
     
-    <!-- Cards / Sections -->
     <div class="card">
       <div class="card-content">
         <h3>Founder @ Stealth</h3>
