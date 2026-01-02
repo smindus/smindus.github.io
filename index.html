@@ -1,668 +1,232 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Museum Exhibit</title>
-  <meta name="description" content="A simple, curated portfolio presented like a museum exhibit." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samuel Mindel</title>
+
+  <!-- SEO Metadata -->
+  <meta name="description" content="Samuel Mindel, a global builder bridging cultures, creativity, and commerce." />
+  <meta name="keywords" content="Samuel Mindel, entrepreneur, e-commerce, branding, creativity, strategy, consumer goods, Japan, GC, LA" />
+  <meta name="author" content="Samuel Mindel" />
+  
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
   <style>
-    :root{
-      /* Museum palette */
-      --paper: #f6f1e8;
-      --ink: #161616;
-      --muted: #5a5a5a;
-      --line: rgba(22,22,22,.14);
-      --shadow: rgba(22,22,22,.10);
-
-      --navy: #14233b;
-      --brass: #b08d3b;
-
-      --radius: 18px;
-      --max: 1040px;
-      --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Garamond, serif;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    }
-
-    *{ box-sizing: border-box; }
-    html{ scroll-behavior: smooth; }
-    body{
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: radial-gradient(900px 520px at 20% -10%, rgba(176,141,59,.09), transparent 55%),
-                  radial-gradient(900px 520px at 80% 10%, rgba(20,35,59,.08), transparent 55%),
-                  var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      line-height: 1.55;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      background-color: #fff;
+    }
+    
+    .container {
+      max-width: 750px;
+      margin: 10px auto;
+      padding: 2rem;
+    }
+    
+    .name-heading {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+    
+    .heading {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    
+    @media (max-width: 480px) {
+      .heading {
+        font-size: 1.7rem;
+      }
     }
 
-    /* Subtle “gallery wall” texture */
-    body:before{
-      content:"";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(to bottom, rgba(0,0,0,.03), transparent 60%),
-        repeating-linear-gradient(90deg, rgba(0,0,0,.03), rgba(0,0,0,.03) 1px, transparent 1px, transparent 64px);
-      opacity: .12;
-      mix-blend-mode: multiply;
+    .subheading {
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin: 0 auto 2rem auto;
+      max-width: 600px;
+      color: #000;
+    }
+    
+    /* Social Links Container */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Circular icon buttons */
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      text-decoration: none;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      color: #000;
+      font-size: 1.2rem;
     }
 
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-
-    .wrap{
-      width: min(100%, var(--max));
-      margin: 0 auto;
-      padding: 28px 18px 68px;
-      position: relative;
+    .social-links a:hover {
+      background-color: #f9f9f9;
+      border-color: #ccc;
+      transform: translateY(-2px);
     }
-
-    /* Header */
-    header{
+    
+    /* Brand colors for icons */
+    .social-links a i.fa-twitter {
+      color: #1DA1F2;
+    }
+    .social-links a i.fa-instagram {
+      color: #E1306C;
+    }
+    .social-links a i.fa-linkedin {
+      color: #0077B5;
+    }
+    .social-links a i.fa-tiktok {
+      color: #000;
+    }
+    
+    /* Cards */
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 550px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      padding: 8px 0 16px;
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      background: rgba(246,241,232,.78);
-      backdrop-filter: blur(10px);
-      z-index: 50;
     }
-
-    .mark{
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
+    
+    .card-content {
+      max-width: 75%;
+    }
+    
+    .card-content h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .card-content p {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #555;
+    }
+    
+    .card-action a {
+      text-decoration: none;
+      color: #000;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
       white-space: nowrap;
     }
-    .mark .title{
-      font-family: var(--serif);
-      letter-spacing: .3px;
-      font-weight: 700;
-      font-size: 16px;
+    
+    .card-action a:hover {
+      background-color: #f9f9f9;
+      border-color: #ccc;
     }
-    .mark .sub{
-      color: var(--muted);
-      font-size: 12px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    nav{
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      font-size: 13px;
-      color: var(--muted);
-    }
-    nav a{
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
-    nav a:hover{
-      border-color: var(--line);
-      text-decoration: none;
-      background: rgba(255,255,255,.55);
-    }
-
-    /* Hero */
-    .hero{
-      padding: 40px 0 24px;
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 18px;
-      align-items: start;
-    }
-    @media (max-width: 860px){
-      .hero{ grid-template-columns: 1fr; }
-    }
-
-    .hero h1{
-      margin: 0 0 10px;
-      font-family: var(--serif);
-      font-size: clamp(34px, 4.2vw, 52px);
-      line-height: 1.05;
-      letter-spacing: .2px;
-    }
-    .hero p{
-      margin: 0 0 18px;
-      color: var(--muted);
-      max-width: 62ch;
-      font-size: 15px;
-    }
-
-    .hero .cta{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
-    .btn{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.55);
-      box-shadow: 0 10px 22px var(--shadow);
-      font-size: 13px;
-    }
-    .btn:hover{ text-decoration: none; transform: translateY(-1px); }
-    .btn strong{ font-weight: 700; }
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      font-size: 12px;
-      color: var(--muted);
-      background: transparent;
-    }
-    .dot{
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--brass);
-      box-shadow: 0 0 0 3px rgba(176,141,59,.18);
-    }
-
-    /* Plaque card (right column) */
-    .plaque{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.55);
-      box-shadow: 0 18px 38px var(--shadow);
-      padding: 16px;
-      position: relative;
-      overflow: hidden;
-    }
-    .plaque:before{
-      content:"";
-      position: absolute;
-      inset: -80px -80px auto auto;
-      width: 160px; height: 160px;
-      background: radial-gradient(circle at 30% 30%, rgba(176,141,59,.22), transparent 60%);
-      transform: rotate(25deg);
-    }
-    .plaque h2{
-      margin: 0 0 8px;
-      font-family: var(--serif);
-      font-size: 16px;
-      letter-spacing: .2px;
-    }
-    .plaque ul{
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .plaque li{ margin: 6px 0; }
-    .kicker{
-      display: inline-block;
-      font-size: 11px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--navy);
-      opacity: .9;
-      margin-bottom: 10px;
-    }
-
-    /* Sections */
-    section{
-      padding: 28px 0;
-      border-top: 1px solid var(--line);
-    }
-    .section-title{
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .section-title h3{
-      margin: 0;
-      font-family: var(--serif);
-      font-size: 20px;
-      letter-spacing: .2px;
-    }
-    .section-title .small{
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* Exhibit grid */
-    .grid{
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 12px;
-    }
-    .exhibit{
-      grid-column: span 6;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.55);
-      box-shadow: 0 14px 30px var(--shadow);
-      padding: 16px;
-      position: relative;
-      overflow: hidden;
-    }
-    @media (max-width: 860px){
-      .exhibit{ grid-column: span 12; }
-    }
-
-    .exhibit .label{
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .exhibit .id{
-      font-family: var(--mono);
-      font-size: 12px;
-      color: rgba(20,35,59,.85);
-      letter-spacing: .08em;
-    }
-    .exhibit h4{
-      margin: 0 0 6px;
-      font-size: 16px;
-      letter-spacing: .2px;
-    }
-    .exhibit p{
-      margin: 0 0 12px;
-      color: var(--muted);
-      font-size: 13px;
-      max-width: 60ch;
-    }
-
-    .facts{
-      border-top: 1px dashed var(--line);
-      margin-top: 10px;
-      padding-top: 10px;
-      display: grid;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .fact{
-      display: flex;
-      gap: 10px;
-    }
-    .fact b{
-      color: var(--ink);
-      font-weight: 700;
-      min-width: 96px;
-    }
-
-    /* Details (built-in accordion) */
-    details{
-      border-top: 1px solid var(--line);
-      margin-top: 12px;
-      padding-top: 10px;
-    }
-    summary{
-      cursor: pointer;
-      list-style: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: var(--navy);
-      user-select: none;
-    }
-    summary::-webkit-details-marker{ display:none; }
-    summary:before{
-      content:"▸";
-      display: inline-block;
-      transform: translateY(-1px);
-      transition: transform .2s ease;
-      color: var(--brass);
-      font-size: 14px;
-    }
-    details[open] summary:before{ transform: rotate(90deg) translateX(1px); }
-    .case{
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .case .meta{
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 10px 0 12px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    .tag{
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 6px 10px;
-      background: rgba(255,255,255,.4);
-    }
-    .case h5{
-      margin: 14px 0 6px;
-      color: var(--ink);
-      font-size: 13px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .case ul{
-      margin: 6px 0 0;
-      padding-left: 18px;
-    }
-
-    /* Footer / contact */
-    .contact{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    @media (max-width: 860px){
-      .contact{ grid-template-columns: 1fr; }
-    }
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.55);
-      box-shadow: 0 14px 30px var(--shadow);
-      padding: 16px;
-    }
-    .card h4{
-      margin: 0 0 8px;
-      font-family: var(--serif);
-      font-size: 16px;
-    }
-    .card p{ margin: 0; color: var(--muted); font-size: 13px; }
-
-    footer{
-      padding-top: 18px;
-      color: var(--muted);
-      font-size: 12px;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    /* Accessibility */
-    :focus-visible{
-      outline: 3px solid rgba(176,141,59,.35);
-      outline-offset: 3px;
-      border-radius: 8px;
+    
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #666;
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="mark">
-        <div class="title">Your Name</div>
-        <div class="sub">Personal Collection</div>
+  <div class="container">
+    <h2 class="name-heading">SAMUEL MINDEL</h2>
+    
+    <h1 class="heading">
+      Building cool things,<br>
+      with cool people.
+    </h1>
+
+    <div class="social-links">
+      <a href="https://x.com/samuelmindel" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/sxmuelmindel" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@sxmuelmindel" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/samuelmindel" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    
+    <div class="card">
+      <div class="card-content">
+        <h3>Founder @ Stealth</h3>
+        <p>Innovating in one of the world’s oldest industries</p>
       </div>
-      <nav aria-label="Primary">
-        <a href="#exhibits">Exhibits</a>
-        <a href="#about">About</a>
-        <a href="#now">Now</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <div class="hero" id="top">
-        <div>
-          <h1>The Collection</h1>
-          <p>
-            I build projects and case studies with an emphasis on clear outcomes, clean execution,
-            and tasteful design. This site is arranged like a museum: each “exhibit” has a plaque,
-            a short description, and notes for those who want the details.
-          </p>
-
-          <div class="cta">
-            <a class="btn" href="#exhibits"><strong>Enter the gallery</strong> →</a>
-            <a class="btn" href="#contact">Contact</a>
-            <span class="pill"><span class="dot"></span> Currently building: <b>Project Name</b></span>
-          </div>
-        </div>
-
-        <aside class="plaque" aria-label="Curator’s plaque">
-          <span class="kicker">Curator’s Note</span>
-          <h2>What you’ll find here</h2>
-          <ul>
-            <li><b>Exhibits:</b> selected work with outcomes + context</li>
-            <li><b>Methods:</b> how I think, test, and ship</li>
-            <li><b>Contact:</b> one clean way to reach me</li>
-          </ul>
-        </aside>
+      <div class="card-action">
+        <a href="#" target="_blank" rel="noopener noreferrer">Coming Soon</a>
       </div>
-
-      <section id="exhibits">
-        <div class="section-title">
-          <h3>Exhibits</h3>
-          <div class="small">A small set. Carefully labeled.</div>
-        </div>
-
-        <div class="grid">
-          <!-- EXHIBIT 01 -->
-          <article class="exhibit">
-            <div class="label">
-              <span class="id">EXH-01</span>
-              <span class="id">2026</span>
-            </div>
-            <h4>Project / Case Study Title</h4>
-            <p>
-              A one-sentence plaque description: what it is and why it matters.
-              Keep it crisp—like a museum label.
-            </p>
-
-            <div class="facts" aria-label="Placard facts">
-              <div class="fact"><b>Role</b><span>Founder / Marketer / Builder</span></div>
-              <div class="fact"><b>Tools</b><span>HTML, CSS, Analytics, Figma</span></div>
-              <div class="fact"><b>Outcome</b><span>e.g., +18% conversion, shipped in 2 weeks</span></div>
-            </div>
-
-            <details>
-              <summary>View curatorial notes (case study)</summary>
-              <div class="case">
-                <div class="meta">
-                  <span class="tag">Category: Growth</span>
-                  <span class="tag">Time: 14 days</span>
-                  <span class="tag">Status: Shipped</span>
-                </div>
-
-                <h5>Context</h5>
-                <p>2–3 sentences: what was happening, what the constraint was, what “good” looked like.</p>
-
-                <h5>Approach</h5>
-                <ul>
-                  <li>What you did, step-by-step, in plain language.</li>
-                  <li>Decisions you made and why.</li>
-                  <li>Any iteration loop (test → learn → adjust).</li>
-                </ul>
-
-                <h5>Result</h5>
-                <ul>
-                  <li>Quant outcome (best).</li>
-                  <li>Qual outcome (what changed).</li>
-                  <li>What you’d do next.</li>
-                </ul>
-
-                <p style="margin-top:12px;">
-                  <a href="#" aria-label="Optional link to live project">Live link</a> ·
-                  <a href="#" aria-label="Optional link to repository">Repo</a>
-                </p>
-              </div>
-            </details>
-          </article>
-
-          <!-- EXHIBIT 02 -->
-          <article class="exhibit">
-            <div class="label">
-              <span class="id">EXH-02</span>
-              <span class="id">2025</span>
-            </div>
-            <h4>Second Project Title</h4>
-            <p>Another crisp label. Aim for one idea: the artifact and the impact.</p>
-
-            <div class="facts">
-              <div class="fact"><b>Role</b><span>Strategy / Product</span></div>
-              <div class="fact"><b>Tools</b><span>Research, Writing, Prototyping</span></div>
-              <div class="fact"><b>Outcome</b><span>e.g., launched v1, 500 signups</span></div>
-            </div>
-
-            <details>
-              <summary>View curatorial notes (case study)</summary>
-              <div class="case">
-                <p>
-                  Write this one shorter. If you don’t have numbers, focus on clarity:
-                  what you shipped, who it served, what you learned.
-                </p>
-              </div>
-            </details>
-          </article>
-
-          <!-- EXHIBIT 03 -->
-          <article class="exhibit">
-            <div class="label">
-              <span class="id">EXH-03</span>
-              <span class="id">Ongoing</span>
-            </div>
-            <h4>Current Build / In Progress</h4>
-            <p>A living exhibit. Explain the direction and what you’re proving.</p>
-
-            <div class="facts">
-              <div class="fact"><b>Role</b><span>Founder</span></div>
-              <div class="fact"><b>Tools</b><span>Design, Iteration, Customer Calls</span></div>
-              <div class="fact"><b>Goal</b><span>e.g., validate pricing + first 10 customers</span></div>
-            </div>
-
-            <details>
-              <summary>View curatorial notes (what’s next)</summary>
-              <div class="case">
-                <h5>What I’m testing</h5>
-                <ul>
-                  <li>Hypothesis: ___</li>
-                  <li>Signal: ___</li>
-                  <li>Decision rule: if ___ then ___</li>
-                </ul>
-              </div>
-            </details>
-          </article>
-
-          <!-- EXHIBIT 04 -->
-          <article class="exhibit">
-            <div class="label">
-              <span class="id">EXH-04</span>
-              <span class="id">Archive</span>
-            </div>
-            <h4>Small Experiment / Note</h4>
-            <p>A lightweight exhibit for something small but interesting.</p>
-
-            <div class="facts">
-              <div class="fact"><b>Type</b><span>Experiment</span></div>
-              <div class="fact"><b>Constraint</b><span>e.g., 1 weekend</span></div>
-              <div class="fact"><b>Learning</b><span>e.g., messaging mattered more than features</span></div>
-            </div>
-
-            <details>
-              <summary>View curatorial notes</summary>
-              <div class="case">
-                <p>
-                  This is where you show taste. Small, well-written reflections stand out
-                  more than a long list of links.
-                </p>
-              </div>
-            </details>
-          </article>
-        </div>
-      </section>
-
-      <section id="about">
-        <div class="section-title">
-          <h3>About</h3>
-          <div class="small">The curator, briefly.</div>
-        </div>
-
-        <p style="margin:0;color:var(--muted);max-width:72ch;">
-          Write 5–8 sentences. Keep it specific: what you build, what you value, what you’re aiming at.
-          Include one “proof” line (a metric, a brand, a shipped thing).
-        </p>
-
-        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
-          <span class="tag">Focus: Growth & Product</span>
-          <span class="tag">Taste: Minimal, vintage-leaning</span>
-          <span class="tag">Mode: Build → test → refine</span>
-        </div>
-      </section>
-
-      <section id="now">
-        <div class="section-title">
-          <h3>Now</h3>
-          <div class="small">What I’m working on this month.</div>
-        </div>
-
-        <div class="card">
-          <h4>Current Exhibition Notes</h4>
-          <p>
-            Keep this updated. 3 bullets max.
-          </p>
-          <ul style="margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:13px;">
-            <li>Building: ____</li>
-            <li>Learning: ____</li>
-            <li>Looking for: ____</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="section-title">
-          <h3>Contact</h3>
-          <div class="small">One clean door.</div>
-        </div>
-
-        <div class="contact">
-          <div class="card">
-            <h4>Email</h4>
-            <p>
-              <a href="mailto:you@example.com"><b>you@example.com</b></a><br />
-              Short note: what kind of messages you’re open to (work, collabs, coffee chats).
-            </p>
-          </div>
-
-          <div class="card">
-            <h4>Social</h4>
-            <p>
-              <a href="#" target="_blank" rel="noreferrer">LinkedIn</a> ·
-              <a href="#" target="_blank" rel="noreferrer">GitHub</a> ·
-              <a href="#" target="_blank" rel="noreferrer">X / Twitter</a> ·
-              <a href="#" target="_blank" rel="noreferrer">Instagram</a>
-            </p>
-            <p style="margin-top:10px;">
-              Optional: add a 1-line “signature” link to a best thread, best post, or best project.
-            </p>
-          </div>
-        </div>
-
-        <footer>
-          <span>© <span id="y"></span> Your Name</span>
-          <span>Set in <span style="font-family:var(--serif);">serif</span> + <span style="font-family:var(--sans);">sans</span>. Built as a single page.</span>
-        </footer>
-      </section>
-    </main>
+    </div>
+    
+    <div class="card">
+      <div class="card-content">
+        <h3>Email List</h3>
+        <p>Knowledge drops: business, philosophy, and growth</p>
+      </div>
+      <div class="card-action">
+        <a href="https://samuelmindel.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer">Sign Up</a>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-content">
+        <h3>My Playlist</h3>
+        <p>What's been on repeat</p>
+      </div>
+      <div class="card-action">
+        <a href="https://music.apple.com/us/playlist/%E5%8B%95%E7%94%BBvibes/pl.u-9N9LXMptXMg9JG" target="_blank" rel="noopener noreferrer">Learn more</a>
+      </div>
+    </div>
+    
+    <footer>
+      &copy; 2025 Samuel Mindel
+    </footer>
   </div>
-
-  <script>
-    // Tiny enhancement: year
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
