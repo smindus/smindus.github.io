@@ -444,7 +444,7 @@ footer p {
 
 /* Article Body */
 .article-body {
-  padding: 0 0 4rem;
+  padding: 1.5rem 0 4rem;
   animation: fadeUp 0.8s ease 0.1s both;
 }
 
