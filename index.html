@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuel Mindel — Learning, Investing, Building from Tokyo</title>
+  <meta name="description" content="Samuel Mindel is an entrepreneur and early-stage investor based in Tokyo. Exploring ideas in commerce, writing about the journey, and bridging markets between East and West.">
+  <meta name="keywords" content="Samuel Mindel, Sam Mindel, entrepreneur, investor, Tokyo, commerce, early-stage investing, Oomo, samuelmindel.com">
+  <meta name="author" content="Samuel Mindel">
+
+  <meta property="og:title" content="Samuel Mindel — Learning, Investing, Building from Tokyo">
+  <meta property="og:description" content="Entrepreneur and early-stage investor based in Tokyo. Exploring commerce, writing about the journey.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samuelmindel.com">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Samuel Mindel — Learning, Investing, Building from Tokyo">
+  <meta name="twitter:description" content="Entrepreneur and early-stage investor based in Tokyo.">
+
+  <link rel="canonical" href="https://samuelmindel.com">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%23ebe5df'/></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Samuel Mindel",
+    "alternateName": "Sam Mindel",
+    "url": "https://samuelmindel.com",
+    "description": "Entrepreneur and early-stage investor based in Tokyo, exploring ideas in commerce.",
+    "sameAs": [
+      "https://instagram.com/sxmuelmindel",
+      "https://youtube.com/@samuelmindel"
+    ],
+    "knowsAbout": ["Commerce", "Early-stage investing", "Entrepreneurship"],
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Tokyo, Japan"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'PP Editorial New';
+      src: url('PPEditorialNew-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #000000;
+      --surface: #111111;
+      --surface-hover: #1a1a1a;
+      --surface-border: #222222;
+      --text: #ebe5df;
+      --text-muted: #9b9690;
+      --text-dim: #555250;
+      --font-display: 'PP Editorial New', Georgia, 'Times New Roman', serif;
+      --font-body: 'Manrope', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    ::selection {
+      background: rgba(235, 229, 223, 0.2);
+      color: #fff;
+    }
+
+    /* ---- Top Bar ---- */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .top-bar .location,
+    .top-bar .time {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .top-bar svg {
+      width: 12px;
+      height: 12px;
+      opacity: 0.5;
+    }
+
+    /* ---- Hub ---- */
+    .hub {
+      max-width: 440px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+      text-align: center;
+    }
+
+    /* ---- Profile Photo ---- */
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 1.5rem;
+      border: 2px solid var(--surface-border);
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ---- Name ---- */
+    .name {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ---- Tagline ---- */
+    .tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- Socials ---- */
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      background: var(--surface-hover);
+      color: var(--text);
+      border-color: var(--text-dim);
+    }
+
+    .socials a svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ---- Cards ---- */
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 0.9rem 1.15rem;
+      text-decoration: none;
+      color: var(--text);
+      text-align: left;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background: var(--surface-hover);
+      border-color: var(--text-dim);
+      transform: translateY(-1px);
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .card-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+      line-height: 1.4;
+    }
+
+    .card-arrow {
+      color: var(--text-dim);
+      flex-shrink: 0;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .card:hover .card-arrow {
+      transform: translateX(2px);
+      color: var(--text-muted);
+    }
+
+    .card-tag {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      flex-shrink: 0;
+      background: rgba(235, 229, 223, 0.06);
+      color: var(--text-muted);
+    }
+
+    .card-icon.youtube {
+      background: #1a1111;
+      color: #c87c7c;
+    }
+
+    .card-icon.contact {
+      background: #111418;
+      color: #7c9cc8;
+    }
+
+    /* ---- Easter Egg ---- */
+    .easter-egg {
+      position: fixed;
+      top: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      opacity: 0.04;
+      transition: opacity 0.4s ease;
+      z-index: 100;
+    }
+
+    .easter-egg:hover { opacity: 0.3; }
+
+    .easter-egg svg {
+      width: 100%;
+      height: 100%;
+      color: var(--text);
+    }
+
+    /* ---- Game Overlay ---- */
+    .game-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .game-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .game-overlay .close-game {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .game-overlay .close-game:hover { color: var(--text); }
+
+    .game-overlay canvas {
+      border: 2px solid var(--surface-border);
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .game-overlay .game-info {
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      margin-top: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .game-overlay .game-title {
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      text-align: center;
+      padding: 2.5rem 0 2rem;
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      letter-spacing: 0.04em;
+    }
+
+    /* ---- Animations ---- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hub > * { animation: fadeUp 0.6s ease both; }
+    .profile-photo { animation-delay: 0.05s; }
+    .name { animation-delay: 0.1s; }
+    .tagline { animation-delay: 0.15s; }
+    .socials { animation-delay: 0.2s; }
+    .cards { animation-delay: 0.25s; }
+
+    .cards .card:nth-child(1) { animation: fadeUp 0.5s ease 0.3s both; }
+    .cards .card:nth-child(2) { animation: fadeUp 0.5s ease 0.35s both; }
+    .cards .card:nth-child(3) { animation: fadeUp 0.5s ease 0.4s both; }
+  </style>
+</head>
+<body>
+
+  <!-- Easter Egg -->
+  <div class="easter-egg" title="">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="4" height="4" fill="currentColor"/>
+      <rect x="10" y="2" width="4" height="4" fill="currentColor"/>
+      <rect x="18" y="2" width="4" height="4" fill="currentColor"/>
+      <rect x="6" y="6" width="4" height="4" fill="currentColor"/>
+      <rect x="14" y="6" width="4" height="4" fill="currentColor"/>
+      <rect x="2" y="10" width="4" height="4" fill="currentColor"/>
+      <rect x="10" y="10" width="4" height="4" fill="currentColor"/>
+      <rect x="18" y="10" width="4" height="4" fill="currentColor"/>
+      <rect x="6" y="14" width="4" height="4" fill="currentColor"/>
+      <rect x="14" y="14" width="4" height="4" fill="currentColor"/>
+      <rect x="10" y="18" width="4" height="4" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- Game Overlay -->
+  <div class="game-overlay">
+    <span class="game-title">&#9679; secret level</span>
+    <canvas width="384" height="384"></canvas>
+    <span class="game-info">arrow keys or wasd &middot; swipe on mobile</span>
+    <button class="close-game">ESC &middot; Close</button>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="location">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+      <span>Tokyo, 東京</span>
+    </div>
+    <div class="time">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      <span id="tokyo-time"></span>
+    </div>
+  </div>
+
+  <!-- Hub -->
+  <div class="hub">
+
+    <!-- Profile Photo -->
+    <div class="profile-photo">
+      <img src="photo.jpg" alt="Samuel Mindel">
+    </div>
+
+    <!-- Name -->
+    <h1 class="name">Samuel Mindel</h1>
+
+    <!-- Tagline -->
+    <p class="tagline">Learning, investing, building. Now in 東京.</p>
+
+    <!-- Socials -->
+    <div class="socials">
+      <a href="https://instagram.com/sxmuelmindel" target="_blank" rel="noopener" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="5"/>
+          <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://youtube.com/@samuelmindel" target="_blank" rel="noopener" title="YouTube">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="4" width="20" height="16" rx="4"/>
+          <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a href="mailto:sammindel@me.com" title="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="4" width="20" height="16" rx="3"/>
+          <polyline points="2 4 12 13 22 4"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+      <!-- Oomo -->
+      <a class="card" href="https://drinkoomo.com" target="_blank" rel="noopener">
+        <div class="card-icon">
+          <img src="oomo-icon.png" alt="Oomo!">
+        </div>
+        <div class="card-text">
+          <div class="card-title">Oomo!</div>
+          <div class="card-desc">Green tea + electrolytes. Join the waitlist.</div>
+        </div>
+        <svg class="card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+
+      <!-- YouTube -->
+      <a class="card" href="https://youtube.com/@samuelmindel" target="_blank" rel="noopener">
+        <div class="card-icon youtube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="4"/><polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="card-text">
+          <div class="card-title">YouTube</div>
+          <div class="card-desc">Coming soon.</div>
+        </div>
+        <span class="card-tag">TBA</span>
+      </a>
+
+      <!-- Contact -->
+      <a class="card" href="mailto:sammindel@me.com">
+        <div class="card-icon contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="3"/><polyline points="2 4 12 13 22 4"/></svg>
+        </div>
+        <div class="card-text">
+          <div class="card-title">Get in Touch</div>
+          <div class="card-desc">sammindel@me.com</div>
+        </div>
+        <svg class="card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Samuel Mindel</p>
+    </footer>
+
+  </div>
+
+  <!-- Tokyo Time -->
+  <script>
+    function updateTime() {
+      const now = new Date().toLocaleTimeString('en-US', {
+        timeZone: 'Asia/Tokyo',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      });
+      document.getElementById('tokyo-time').textContent = now;
+    }
+    updateTime();
+    setInterval(updateTime, 30000);
+  </script>
+
+  <!-- Game -->
+  <script src="game.js"></script>
+</body>
+</html>
